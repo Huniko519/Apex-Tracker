@@ -1,0 +1,8 @@
+<div class="fullscreen">
+  <%-include('partials/form')%> <%notifications.forEach(notification=>{%>
+  <div class="notification is-warning">
+    <button class="delete"></button>
+    <span class="has-text-dark"><%=notification.message%></span>
+  </div>
+  <%})%>
+</div>

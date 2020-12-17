@@ -1,0 +1,25 @@
+<%if(legendsData.length>0){%>
+<div class="results-legend">
+  <%legendsData.map(legend=>{%>
+  <div class="card-legend">
+    <img src="<%=legend.info.imgCover%>" class="img-cover" alt="cover" />
+    <p class="title is-4 has-text-white has-text-weight-bold">
+      <%=legend.info.name%>
+      <div class="tags">
+        <span class="tag <%=legend.info.isActive?'is-success':'is-danger'%>"
+        </span>
+        <%=legend.info.isActive?"ACTIVE":"INACTIVE"%></span>
+      </div>
+    </p>
+    <ul class="list-stats">
+      <%legend.stats.forEach(stat=>{%>
+      <li>
+        <h5 class="subtitle is-6 has-text-white"><%=stat.displayName%></h5>
+        <h3 class="title is-2 has-text-warning"><%=stat.displayValue%></h3>
+      </li>
+      <%})%>
+    </ul>
+  </div>
+  <%})%>
+</div>
+<%}%>

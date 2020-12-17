@@ -1,0 +1,23 @@
+{
+  "name": "apex-tracker-v2",
+  "version": "1.0.0",
+  "description": "Version 2 of Apex tracker app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Aro",
+  "license": "ISC",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "node-fetch": "^2.6.0"
+  }
+}

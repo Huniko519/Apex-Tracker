@@ -1,0 +1,31 @@
+<%if(overviewData.length>0){%>
+<div class="hero is-dark">
+  <div class="hero-body">
+    <div class="overview">
+      <div class="gamerInfos">
+        <figure class="image is-64x64">
+          <img src="<%=gamerInfos.avatarUrl%>" alt="avatar" />
+        </figure>
+        <p class="title is-3 has-text-success has-text-weight-bold">
+          <%=gamerInfos.gamertag%>
+        </p>
+        <div class="tags">
+          <span class="tag is-warning is-large"><%=gamerInfos.platform%></span>
+          <%if(gamerInfos.countryCode){%>
+          <span class="tag is-info is-large"><%=gamerInfos.countryCode%></span>
+          <%}%>
+        </div>
+      </div>
+
+      <ul class="gamerStats">
+        <%overviewData.forEach(data => {%>
+        <li>
+          <h5 class="subtitle is-6"><%=data.displayName%></h5>
+          <h3 class="title is-2 has-text-warning"><%=data.displayValue%></h3>
+        </li>
+        <%})%>
+      </ul>
+    </div>
+  </div>
+</div>
+<%}%>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="apex legends, apex, videogame, apex tracker, titanfall"
+    />
+    <meta name="description" content="Find gamer stats on Apex Legends" />
+    <meta name="author" content="Aroniaina Andriamaro" />
+    <title>Apex Tracker V2</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/apex_legends_ico_by_6ograndoma_dczo00v.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+  <body id="top">
+    <div class="container">
+      <%- body %>
+      <a
+        href="https://github.com/notAro14/apex-tracker-V2"
+        id="github-repo"
+        target="_blank"
+        class="has-text-dark"
+      >
+        Github
+      </a>
+      <a
+        id="go-top"
+        onclick="scrollToTop();return false"
+        class="button is-warning"
+        href="#top"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    <%-include('partials/footer.ejs')%>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        (document.querySelectorAll(".notification .delete") || []).forEach(
+          $delete => {
+            $notification = $delete.parentNode;
+
+            $delete.addEventListener("click", () => {
+              $notification.parentNode.removeChild($notification);
+            });
+          }
+        );
+      });
+
+      function scrollToTop() {
+        const position =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        if (position) {
+          window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
+          scrollAnimation = setTimeout("scrollToTop()", 30);
+        } else clearTimeout(scrollAnimation);
+      }
+    </script>
+  </body>
+</html>

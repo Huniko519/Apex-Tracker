@@ -1,0 +1,137 @@
+body {
+  background: #b4af7d;
+}
+
+ul {
+  list-style: none;
+}
+
+#github-repo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.apex-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apex-landing div {
+  text-align: center;
+}
+
+#go-top {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 500px;
+}
+
+.gamerInfos {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.gamerStats {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 2rem;
+}
+
+.gamerStats li {
+  margin: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.results-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-legend {
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  border-radius: 20px;
+}
+
+.img-cover {
+  height: 200px;
+  width: 400px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.list-stats {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.img-footer {
+  width: 200px;
+  margin-top: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials a {
+  margin: 0.7rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .overview {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gamerInfos {
+    width: 100%;
+  }
+  .results-legend {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gamerStats {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+    height: 400px;
+  }
+  .apex-landing {
+    flex-direction: column;
+    align-items: center;
+  }
+  .apex-landing div {
+    margin-left: 0;
+  }
+}
